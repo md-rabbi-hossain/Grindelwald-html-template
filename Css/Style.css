@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary-color: #1b3936;
+  --bg-secondary-color: #f9f9f9;
+  --bg-tertiary-color: #ffffff;
+  --bg-quaternary-color: #75ff69;
+
+  --text-primary-color: #ffffff;
+  --text-secondary-color: #1b3936;
+  --text-tertiary-color: #f9f9f9;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1440px;
+}
+.hero-section {
+  background: var(--bg-primary-color) url("/assets/img/hero-img.png") no-repeat
+    center center;
+  background-size: 288px;
+  height: 100vh;
+}
+.nav-container {
+  width: 1260px;
+  padding: 35px;
+  margin: 0 auto;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  gap: 8rem;
+}
+.menu div:nth-child(2) {
+  display: flex;
+  gap: 1rem;
+}
+.menu-item {
+  display: flex;
+  gap: 54px;
+}
+.menu-item img {
+  max-width: 135px;
+  height: 33px;
+}
+.menu-item li a {
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-primary-color);
+}
+
+.border-dashed {
+  position: absolute;
+  top: calc(20% - 175px); /* Center vertically and adjust overlap */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) rotate(80deg); /* Centering and rotation */
+  width: 800px; /* Adjust to match background image size */
+  height: 800px; /* Adjust to match background image size */
+  flex-shrink: 0;
+  border-radius: 50%; /* Make it a circle */
+  border: 2px dashed var(--bg-quaternary-color, #1b3936);
+  opacity: 0.5;
+  z-index: 1; /* Ensure it appears above other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center the text inside the circle */
+}
+.text-container {
+  transform: rotate(-80deg); /* Counteract the rotation of the parent */
+  text-align: center; /* Center the text inside the container */
+}

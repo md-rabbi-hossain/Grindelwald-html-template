@@ -513,7 +513,11 @@ input[type="submit"] {
   line-height: normal;
 }
 
+.slide {
+  flex: 0 0 33.3333%; /* Show three slides together */
+}
 .testmonial {
+  overflow: hidden;
   height: 1000px;
   display: flex;
   justify-content: center;
@@ -522,35 +526,43 @@ input[type="submit"] {
 }
 
 .testmonial-card-parent {
+  transition: transform 0.4s ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4rem;
 }
 .testmonial-card,
 .testmonial-card-2,
 .testmonial-card-3 {
   position: relative;
-  width: 378px;
-  height: 477px;
+  width: 350px;
+  height: 440px;
 }
 
 .testmonial-card {
-  background: url("/assets/img/test-1.png") lightgray 50% / cover no-repeat;
+  background: url("/assets/img/test-3.png") lightgray 50% / cover no-repeat;
 }
 .testmonial-card-2 {
   background: url("/assets/img/test-2.png") lightgray 50% / cover no-repeat;
 }
 .testmonial-card-3 {
-  background: url("/assets/img/test-3.png") lightgray 50% / cover no-repeat;
+  background: url("/assets/img/test-1.png") lightgray 50% / cover no-repeat;
 }
 .testmonial-overlay {
   position: absolute;
   background: var(--bg-tertiary-color);
-  width: 92%;
-  height: 152px;
+  width: 400px;
+  height: 145px;
   flex-shrink: 0;
   bottom: 10px;
-  left: -50px;
+  left: -35px;
+  padding: 10px;
+}
+.overlay-content {
+  height: 120px;
+  padding: 6px;
+  line-height: 25px;
 }
 .arrow-button {
   display: flex;

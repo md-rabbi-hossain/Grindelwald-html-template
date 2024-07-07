@@ -17,13 +17,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   cloneSlides();
   const newTotalSlides = slider.children.length;
+
   function updateSlider() {
     slider.style.transition = "transform 0.4s ease-in-out";
     slider.style.transform = `translateX(${
       -(currentIndex + slidesToShow) * (100 / slidesToShow)
     }%)`;
   }
+
+  function setActiveButton(button) {
+    prevButton.classList.remove("active-button");
+    nextButton.classList.remove("active-button");
+    button.classList.add("active-button");
+  }
+
   function nextSlide() {
+    setActiveButton(nextButton);
     if (currentIndex >= totalSlides) {
       slider.style.transition = "none";
       currentIndex = 0;
@@ -41,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
       updateSlider();
     }
   }
+
   function prevSlide() {
+    setActiveButton(prevButton);
     if (currentIndex <= 0) {
       slider.style.transition = "none";
       currentIndex = totalSlides;

@@ -488,3 +488,127 @@ input[type="submit"] {
   height: 1250px;
   background-color: var(--bg-secondary-color);
 }
+.top-side-content-parent {
+  justify-content: space-between;
+  display: flex;
+  align-items: end;
+}
+.top-side-content-parent > div:first-child h1 {
+  width: 766px;
+  color: #1b3936;
+  font-family: "Boska Variable";
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.top-side-content-parent > div:nth-child(2) > p {
+  width: 379px;
+  color: var(--text-secondary-color);
+  font-family: var(--text-secondary-font);
+  font-size: var(--text-primary-font-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.testmonial {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.testmonial-card-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testmonial-card,
+.testmonial-card-2,
+.testmonial-card-3 {
+  position: relative;
+  width: 378px;
+  height: 477px;
+}
+
+.testmonial-card {
+  background: url("/assets/img/test-1.png") lightgray 50% / cover no-repeat;
+}
+.testmonial-card-2 {
+  background: url("/assets/img/test-2.png") lightgray 50% / cover no-repeat;
+}
+.testmonial-card-3 {
+  background: url("/assets/img/test-3.png") lightgray 50% / cover no-repeat;
+}
+.testmonial-overlay {
+  position: absolute;
+  background: var(--bg-tertiary-color);
+  width: 92%;
+  height: 152px;
+  flex-shrink: 0;
+  bottom: 10px;
+  left: -50px;
+}
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.left-arrow {
+  background: url("/assets/img/left-arrow.png") var(--bg-primary-color) 50% /
+    cover no-repeat;
+  background-size: 30px;
+}
+.right-arrow {
+  background: url("/assets/img/rigth-arrow.png") var(--bg-quaternary-color) 50% /
+    cover no-repeat;
+  background-size: 30px;
+}
+/* <!-- testmonial section css end here   --> */
+
+/* footer area css start here */
+.footer-top {
+  height: 800px;
+  background-color: var(--bg-tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-top-content-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-top-content-parent > div:first-child > h1 {
+  width: 711px;
+  color: var(--text-secondary-color);
+  font-family: var(--text-primary-font);
+  font-size: var(--text-scondery-font-size);
+  font-style: normal;
+  font-weight: var(--text-scondery-font-weight);
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.footer-top-content-parent > div:first-child > p {
+  color: var(--text-secondary-color);
+  font-family: var(--text-secondary-font);
+  font-size: var(--text-primary-font-size);
+  font-style: normal;
+  font-weight: var(--text-scondery-font-weight);
+  line-height: normal;
+}
+/* footer area css end here */

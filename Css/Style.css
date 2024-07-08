@@ -1,21 +1,45 @@
-/* Reset css Start here  */
+/**
+ ****************************************************
+ *                                                  *
+ *                   Grindelwald                    *
+ *                 Theme by Static-mania            *
+ *                     Version: 1.0                 *
+ *                                                  *
+ *                                                  *
+ *                                                  *
+ *      Validated by W3 CSS                         *
+ *      Developed by Md Rabbi Hossain               *
+ *                                                  *
+ ****************************************************
+ */
+
+/* 
+ * Table of Contents
+ * 
+ * 1.0 - Fonts
+ * 2.0 - Reset CSS
+ * 3.0 - Hero
+ * 4.0 - Info
+ * 5.0 - About Us
+ * 6.0 - Cabin
+ * 7.0 - Offer
+ * 8.0 - Testimonial
+ * 9.0 - Footer
+ */
+
+/* ==========================================================================
+   1.0 Reset css
+   ========================================================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Boska Variable";
-  src: url("/assets/fonts/Boska-Variable.ttf");
-  font-style: italic;
+html {
+  scroll-behavior: smooth;
 }
-@font-face {
-  font-family: "Switzer Variable";
-  src: url("/assets/fonts/Switzer-Variable.ttf");
-  font-style: normal;
-}
-
 :root {
   --bg-primary-color: #1b3936;
   --bg-secondary-color: #f9f9f9;
@@ -36,6 +60,7 @@
   --text-primary-font-weight: 700;
   --text-scondery-font-weight: 400;
 }
+
 li {
   list-style: none;
 }
@@ -52,15 +77,30 @@ a {
   margin: 0 auto;
   height: auto;
 }
+/* ==========================================================================
+   2.0 Fonts 
+   ========================================================================== */
 
-/* Reset css End here  */
+@font-face {
+  font-family: "Boska Variable";
+  src: url("../assets/fonts/Boska-Variable.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Switzer Variable";
+  src: url("../assets/fonts/Switzer-Variable.ttf");
+  font-style: normal;
+}
 
-/* Hero section css start here.. */
+/* ==========================================================================
+   3.0 Hero
+   ========================================================================== */
 .hero-section {
-  background: var(--bg-primary-color) url("/assets/img/hero-img.png") no-repeat
-    center center;
+  background: var(--bg-primary-color) url("../assets/img/hero-img.png")
+    no-repeat center center;
   background-size: 500px;
   height: 150vh;
+  background-position: center;
 }
 .menu {
   display: flex;
@@ -100,6 +140,10 @@ a {
   justify-content: center;
   text-align: center;
 }
+.text-container {
+  height: 600px;
+  width: 600px;
+}
 .text-container,
 .play-button {
   transform: rotate(-80deg);
@@ -107,8 +151,8 @@ a {
 }
 .play-button {
   position: absolute;
-  right: 40%;
-  top: -40px;
+  right: 36%;
+  top: -36px;
   cursor: pointer;
 }
 .text-container span {
@@ -130,7 +174,7 @@ a {
 }
 .text-container .second {
   color: var(--bg-quaternary-color);
-  margin-left: 22rem;
+  margin-left: 15rem;
   font-size: 200px;
   font-family: var(--text-primary-font);
   font-weight: var(--text-scondery-font-weight);
@@ -155,8 +199,9 @@ a {
   font-size: var(--text-primary-font-size);
   margin-top: 39px;
 }
-/* Hero section css end here.. */
-/* info section css start here.. */
+/* ==========================================================================
+   4.0 Info
+   ========================================================================== */
 .info-section {
   background-color: var(--bg-secondary-color);
   height: 850px;
@@ -211,16 +256,17 @@ a {
 .right-side-content > div {
   line-height: 3rem;
 }
-/* info section css end here.. */
-/* image section css start here.. */
+/* ==========================================================================
+   5.0 About us
+   ========================================================================== */
 .image-section {
   height: 850px;
-  background-image: url("/assets/img/Image.png");
-  background-position: cover;
+  background-image: url("../assets/img/Image.png");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
-/* image section css end here.. */
-/* about-us section css start here.. */
+
 .about-us {
   max-width: 100%;
   height: 1650px;
@@ -233,7 +279,7 @@ a {
   display: block;
   width: 100%;
   height: 113px;
-  background: #1b3936 url("/assets/img/Intersect.png") no-repeat;
+  background: #1b3936 url("../assets/img/Intersect.png") no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 0;
@@ -285,7 +331,7 @@ a {
   color: white;
   padding: 20px;
   text-align: center;
-  z-index: 10; /* Ensure it appears on top of other elements */
+  z-index: 10;
   border-radius: 8px;
 }
 .front-text p {
@@ -316,7 +362,9 @@ a {
   font-weight: var(--text-scondery-font-weight);
   line-height: normal;
 }
-/* about-us section css end here.. */
+/* ==========================================================================
+   6.0 Cabin
+   ========================================================================== */
 /* <!-- Cabin section css here here  --> */
 .Cabin {
   height: 1200px;
@@ -351,7 +399,7 @@ a {
   position: relative;
   width: 330.4px; /* 378px * 0.8 */
   height: 404.544px; /* 505.68px * 0.8 */
-  background: url("/assets/img/image-3.png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/image-3.png") lightgray 50% / cover no-repeat;
 }
 .room-2 {
   position: relative;
@@ -359,16 +407,16 @@ a {
   width: 465.6px; /* 582px * 0.8 */
   height: 622.6528px; /* 778.316px * 0.8 */
   flex-shrink: 0;
-  background: url("/assets/img/Image (1).png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/Image (1).png") lightgray 50% / cover no-repeat;
 }
 .room-3 {
-  background: url("/assets/img/Image (2).png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/Image (2).png") lightgray 50% / cover no-repeat;
 }
 .overlay-text {
   position: absolute;
   display: flex;
   align-items: center;
-  bottom: 30px;
+  bottom: 60px;
 }
 .overlay-text h1 {
   color: #f9f9f9;
@@ -381,14 +429,13 @@ a {
 }
 .overlay-text > div:first-child h1 {
   color: var(--text-primary-color);
-  font-family: var(--text-primary-color);
+  font-family: var(--text-primary-font);
   font-size: var(--text-scondery-font-size);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: capitalize;
 }
-
 .overlay-text > div:first-child p {
   width: 381px;
   color: #fff;
@@ -398,8 +445,9 @@ a {
   font-weight: var(--text-scondery-font-weight);
   line-height: normal;
 }
-/* <!-- Cabin section css end here   --> */
-/* <!-- Offer section css start here   --> */
+/* ==========================================================================
+   7.0 Offer
+   ========================================================================== */
 .offer {
   background-color: var(--bg-primary-color);
   height: 960px;
@@ -411,7 +459,7 @@ a {
   position: relative;
   width: 1194px;
   height: 704px;
-  background: url("/assets/img/BG.png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/BG.png") lightgray 50% / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -473,8 +521,9 @@ input[type="submit"] {
   font-weight: 600;
   line-height: normal;
 }
-/* <!-- Offer section css end here   --> */
-/* <!-- testmonial section css start here   --> */
+/* ==========================================================================
+   8.0 Testimonial
+   ========================================================================== */
 
 .testmonial-section {
   height: 1150px;
@@ -529,15 +578,14 @@ input[type="submit"] {
   width: 350px;
   height: 440px;
 }
-
 .testmonial-card {
-  background: url("/assets/img/test-3.png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/test-3.png") lightgray 50% / cover no-repeat;
 }
 .testmonial-card-2 {
-  background: url("/assets/img/test-2.png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/test-2.png") lightgray 50% / cover no-repeat;
 }
 .testmonial-card-3 {
-  background: url("/assets/img/test-1.png") lightgray 50% / cover no-repeat;
+  background: url("../assets/img/test-1.png") lightgray 50% / cover no-repeat;
 }
 .testmonial-overlay {
   position: absolute;
@@ -560,7 +608,6 @@ input[type="submit"] {
   align-items: center;
   gap: 2rem;
 }
-
 .left-arrow,
 .right-arrow {
   width: 60px;
@@ -571,13 +618,13 @@ input[type="submit"] {
 }
 
 .left-arrow {
-  background: url("/assets/img/left-arrow.png") var(--bg-primary-color) 50% /
+  background: url("../assets/img/left-arrow.png") var(--bg-primary-color) 50% /
     cover no-repeat;
   background-size: 30px;
 }
 
 .right-arrow {
-  background: url("/assets/img/right-Icon.png") var(--bg-primary-color) 50% /
+  background: url("../assets/img/right-Icon.png") var(--bg-primary-color) 50% /
     cover no-repeat;
   background-size: 30px;
 }
@@ -590,9 +637,9 @@ input[type="submit"] {
   background-color: var(--bg-quaternary-color);
 }
 
-/* <!-- testmonial section css end here   --> */
-
-/* footer top css start here */
+/* ==========================================================================
+   9.0 Footer
+   ========================================================================== */
 .footer-top {
   height: 600px;
   background-color: var(--bg-tertiary-color);
@@ -609,7 +656,6 @@ input[type="submit"] {
   height: 400px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
   gap: 4rem;
 }
@@ -645,20 +691,24 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* footer top css end here */
-/* footer  css start here */
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .footer > div:nth-child(1) {
+  position: relative;
   background-color: var(--bg-quaternary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 320px;
   width: 480px;
+}
+.icon-bottom {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 .footer > div:nth-child(1) h1 {
   color: var(--text-secondary-color);
@@ -735,7 +785,7 @@ footer.main-container {
   align-items: center;
 }
 .container.footer-bottom p {
-  color: var(--text-secondary-font);
+  color: var(--text-secondary-color);
   font-family: var(--text-secondary-font);
   font-size: var(--text-primary-font-size);
   font-style: normal;
@@ -743,4 +793,3 @@ footer.main-container {
   line-height: normal;
   cursor: pointer;
 }
-/* footer  css end here */

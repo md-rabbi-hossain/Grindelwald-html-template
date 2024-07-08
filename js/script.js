@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Testimonial Slider
+   ========================================================================== */
+
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".center-slider");
   const slides = document.querySelectorAll(".slide");
@@ -7,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const slidesToShow = 3;
   const totalSlides = slides.length;
 
+  //**  Function to clone slides for infinite looping **//
   function cloneSlides() {
     for (let i = 0; i < slidesToShow; i++) {
       let cloneFirst = slides[i].cloneNode(true);
@@ -15,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slider.insertBefore(cloneLast, slider.firstChild);
     }
   }
+
   cloneSlides();
   const newTotalSlides = slider.children.length;
 
@@ -24,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       -(currentIndex + slidesToShow) * (100 / slidesToShow)
     }%)`;
   }
-
+  //**  Function to set active button state **//
   function setActiveButton(button) {
     prevButton.classList.remove("active-button");
     nextButton.classList.remove("active-button");
@@ -77,4 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
   slider.style.transform = `translateX(${
     -(currentIndex + slidesToShow) * (100 / slidesToShow)
   }%)`;
+});
+
+/* ==========================================================================
+   Smooth Scroll Behavior
+   ========================================================================== */
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
